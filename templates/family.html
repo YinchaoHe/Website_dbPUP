@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="page-header">
+            <h3>{{ name }}</h3>
+
+        </div>
+    </div>
+    <!-- Main Content Area-->
+    {% if amount != 0 %}
+        <div class="subFamily">
+            <h2>Subfamily</h2>
+            <ul class="breadcrumb" style="font-size: medium">
+                {% for i in range(amount) %}
+                    {% set family_id = family_id + '_' + (i + 1)|string() %}
+                    <li><a href="{{ url_for('subfamily', family_id = family_id) }}">{{ family_id }}</a> <span
+                            class="divider"></span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+    <div class="familyResource">
+        <h2>Family Sequences</h2>
+        <ul class="breadcrumb" style="font-size: medium">
+            <li>
+                <button><a href="{{ url_for('swissport', family_id = family_id) }}">Swiss-Prot</a></button>
+            </li>
+            <li>
+                <button><a href="{{ url_for('trembl', family_id = family_id) }}">TrEMBL</a></button>
+            </li>
+        </ul>
+    </div>
+    <br>
+    <div class="familyInformation">
+        {{ content|safe }}
+    </div>
+{% endblock %}
