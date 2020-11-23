@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This website is developed for [Yin's Lab](http://bcb.unl.edu/) located at the [University of Nebraska - Lincoln](https://www.unl.edu) and founded by [NSF](https://www.nsf.gov/). This repository is for the public so there is no database files.
+This website is developed for [Yin's Lab](http://bcb.unl.edu/) located at the [University of Nebraska - Lincoln](https://www.unl.edu) and founded by [NSF](https://www.nsf.gov/). `This repository is for the public so there is no database files.`
 
 ## Installation
 
